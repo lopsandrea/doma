@@ -44,7 +44,7 @@ class FragmentForm2 extends FragmentFormBase {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton button1 = (RadioButton) group.findViewById(checkedId);
                 if (null != button1 && checkedId > -1){
-                    model.setEta1(eta1 = button1.getText().toString());
+                    model.setEta1(button1.getText().toString());
                     Log.e("Cazzo", " "+ eta1);
 
                 }
@@ -61,7 +61,7 @@ class FragmentForm2 extends FragmentFormBase {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton button2 = (RadioButton) group.findViewById(checkedId);
                 if (null != button2 && checkedId > -1){
-                    model.setSono1(sono1 = button2.getText().toString());
+                    model.setSono1(button2.getText().toString());
                     Log.e("Cazzo", " "+ sono1);
                 }
             }
@@ -76,7 +76,7 @@ class FragmentForm2 extends FragmentFormBase {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton button3 = (RadioButton) group.findViewById(checkedId);
                 if (null != button3 && checkedId > -1){
-                    model.setTipo1(tipo1 = button3.getText().toString());
+                    model.setTipo1(button3.getText().toString());
                     Log.e("Cazzo", " "+ tipo1);
                 }
             }
@@ -92,7 +92,7 @@ class FragmentForm2 extends FragmentFormBase {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton button4 = (RadioButton) group.findViewById(checkedId);
                 if (null != button4 && checkedId > -1){
-                    model.setFumo1(fumo1 = button4.getText().toString());
+                    model.setFumo1(button4.getText().toString());
                     Log.e("Cazzo", " "+ fumo1);
                 }
             }

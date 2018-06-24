@@ -38,42 +38,45 @@ class FragmentForm3 extends FragmentFormBase {
                 R.layout.fragment_form3, container, false);
         model = ViewModelProviders.of(this).get(FormViewModel.class);
 
-        eta= model.getEta();
-        sono= model.getSono();
-        tipo= model.getTipo();
-        fumo= model.getFumo();
-        eta1= model.getEta1();
-        sono1= model.getSono1();
-        tipo1= model.getTipo1();
-        fumo1= model.getFumo1();
-        Log.e("cairo2 "," "+eta);
+        View aaaView = rootView.findViewById(R.id.button);
+        aaaView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-//        cazzo1=eta.equals(eta1);
-//        Log.e("cazzo1 "," "+cazzo1);
-//        cazzo2=sono.equals(sono1);
-//        cazzo3=tipo.equals(tipo1);
-//        cazzo4=fumo.equals(fumo1);
+                eta= model.getEta();
+                sono= model.getSono();
+                tipo= model.getTipo();
+                fumo= model.getFumo();
+                eta1= model.getEta1();
+                sono1= model.getSono1();
+                tipo1= model.getTipo1();
+                fumo1= model.getFumo1();
+                Log.e("cairo2 "," "+eta);
 
-        if (cazzo1=true){
-            statoeta++;
-            Log.e("cazzo222 "," "+statoeta);
-        }
-        if (sono==sono1){
-            statosono++;
-        }
-        if (tipo==tipo1){
-            statotipo++;
-        }
-        if (fumo==fumo1){
-            statofumo++;
-        }
+                cazzo1=eta.equals(eta1);
+                Log.e("cazzo1 "," "+cazzo1);
+                cazzo2=sono.equals(sono1);
+                cazzo3=tipo.equals(tipo1);
+                cazzo4=fumo.equals(fumo1);
 
-        statotot= statoeta+statotipo+statosono+statofumo;
-        Log.e("cazzo "," "+statotot);
+                if (cazzo1=true){
+                    statoeta++;
+                    Log.e("cazzo222 "," "+statoeta);
+                }
+                if (sono==sono1){
+                    statosono++;
+                }
+                if (tipo==tipo1){
+                    statotipo++;
+                }
+                if (fumo==fumo1){
+                    statofumo++;
+                }
 
-
-
-
+                statotot= statoeta+statotipo+statosono+statofumo;
+                Log.e("cazzo "," "+statotot);
+            }
+        });
         return rootView;
 
     }
