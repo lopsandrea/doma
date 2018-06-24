@@ -38,20 +38,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void saveForm(String eta, String sono, String tipo, String fumo){
-        model.setEta(eta);
-        model.setSono(sono);
-        model.setTipo(tipo);
-        model.setFumo(fumo);
-    }
-
-    public void saveForm1(String eta1, String sono1, String tipo1, String fumo1){
-        model.setEta1(eta1);
-        model.setSono1(sono1);
-        model.setTipo1(tipo1);
-        model.setFumo1(fumo1);
-    }
-
     public void nextPagerPage() {
         Log.e("tag", model.getPagerPosition() + "");
         if (model.getPagerPosition() != 2) {

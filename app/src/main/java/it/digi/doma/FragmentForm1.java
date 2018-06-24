@@ -43,8 +43,10 @@ class FragmentForm1 extends FragmentFormBase {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton button1 = (RadioButton) group.findViewById(checkedId);
                 if (null != button1 && checkedId > -1){
-                    eta= button1.getText().toString();
+                    model.setEta(eta= button1.getText().toString());
                     Log.e("Cazzo", " "+eta );
+
+
                 }
             }
         });
@@ -59,8 +61,10 @@ class FragmentForm1 extends FragmentFormBase {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton button2 = (RadioButton) group.findViewById(checkedId);
                 if (null != button2 && checkedId > -1){
-                    sono= button2.getText().toString();
+                    model.setSono(sono= button2.getText().toString());
                     Log.e("Cazzo", " "+sono);
+
+
                 }
             }
         });
@@ -74,8 +78,10 @@ class FragmentForm1 extends FragmentFormBase {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton button3 = (RadioButton) group.findViewById(checkedId);
                 if (null != button3 && checkedId > -1){
-                    tipo= button3.getText().toString();
+                    model.setTipo(tipo= button3.getText().toString());
                     Log.e("Cazzo", " "+tipo);
+
+
                 }
             }
         });
@@ -90,20 +96,13 @@ class FragmentForm1 extends FragmentFormBase {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton button4 = (RadioButton) group.findViewById(checkedId);
                 if (null != button4 && checkedId > -1){
-                    fumo= button4.getText().toString();
+                    model.setFumo(fumo= button4.getText().toString());
                     Log.e("Cazzo", " "+fumo);
+
                 }
             }
         });
 
-        model.setEta(eta);
-        model.setSono(sono);
-        model.setTipo(tipo);
-        model.setFumo(fumo);
-
-//        getFormActivity().saveForm(
-//                eta,sono,tipo,fumo
-//        );
 
 
         View continueView = rootView.findViewById(R.id.review_fab);

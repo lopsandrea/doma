@@ -26,6 +26,10 @@ class FragmentForm3 extends FragmentFormBase {
     int statotipo=0;
     int statofumo=0;
     int statotot=0;
+    Boolean cazzo1;
+    Boolean cazzo2;
+    Boolean cazzo3;
+    Boolean cazzo4;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,9 +46,17 @@ class FragmentForm3 extends FragmentFormBase {
         sono1= model.getSono1();
         tipo1= model.getTipo1();
         fumo1= model.getFumo1();
+        Log.e("cairo2 "," "+eta);
 
-        if (eta==eta1){
+//        cazzo1=eta.equals(eta1);
+//        Log.e("cazzo1 "," "+cazzo1);
+//        cazzo2=sono.equals(sono1);
+//        cazzo3=tipo.equals(tipo1);
+//        cazzo4=fumo.equals(fumo1);
+
+        if (cazzo1=true){
             statoeta++;
+            Log.e("cazzo222 "," "+statoeta);
         }
         if (sono==sono1){
             statosono++;
