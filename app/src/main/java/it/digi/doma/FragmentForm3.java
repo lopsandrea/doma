@@ -2,12 +2,16 @@ package it.digi.doma;
 
 import android.annotation.SuppressLint;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 @SuppressLint("ValidFragment")
 class FragmentForm3 extends FragmentFormBase {
@@ -40,6 +44,7 @@ class FragmentForm3 extends FragmentFormBase {
 
         View aaaView = rootView.findViewById(R.id.button);
         aaaView.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
 
@@ -60,17 +65,17 @@ class FragmentForm3 extends FragmentFormBase {
                 cazzo4=fumo.equals(fumo1);
 
                 if (Boolean.TRUE.equals(cazzo1)){
-                    statoeta++;
+                    statoeta=1;
                     Log.e("cazzo222 "," "+statoeta);
                 }
                 if (Boolean.TRUE.equals(cazzo2)){
-                    statosono++;
+                    statosono=1;
                 }
                 if (Boolean.TRUE.equals(cazzo3)){
-                    statotipo++;
+                    statotipo=1;
                 }
                 if (Boolean.TRUE.equals(cazzo4)){
-                    statofumo++;
+                    statofumo=1;
                 }
 
                 statotot= statoeta+statotipo+statosono+statofumo;
@@ -78,6 +83,23 @@ class FragmentForm3 extends FragmentFormBase {
 
                 percert= (statotot*100)/4;
                 Log.e("aaa "," "+percert);
+
+                int percent = ((int) percert);
+
+                ProgressBar mProgress = rootView.findViewById(R.id.progressBar);
+                mProgress.setProgress(percent);
+
+                TextView mtext = rootView.findViewById(R.id.textView);
+                mtext.setText(""+percent+"%" +
+                        "Compatibile");
+
+            }
+        });
+        View continueView = rootView.findViewById(R.id.button1);
+        continueView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nextPage();
             }
         });
         return rootView;

@@ -18,7 +18,7 @@ public class FormPagerAdapter extends FragmentStatePagerAdapter {
             return new FragmentForm3();
         }
 
-        return new FragmentFormBase();
+        return new FragmentForm1();
     }
 
     @Override

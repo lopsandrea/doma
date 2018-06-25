@@ -44,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
             model.setPagerPosition(model.getPagerPosition() + 1);
             pager.setCurrentItem(model.getPagerPosition());
         } else {
-            finish();
+            Intent intent= new Intent(this,MainActivity.class);
+            startActivity(intent);
+
+
         }
     }
 
@@ -54,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
             pager.setCurrentItem(model.getPagerPosition());
         }
         else{
-            finish();
+            Intent intent= new Intent(this,MainActivity.class);
+            startActivity(intent);
         }
     }
 }
