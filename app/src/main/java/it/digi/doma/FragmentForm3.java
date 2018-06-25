@@ -30,13 +30,13 @@ class FragmentForm3 extends FragmentFormBase {
     Boolean cazzo2;
     Boolean cazzo3;
     Boolean cazzo4;
-
+    double percert;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_form3, container, false);
-        model = ViewModelProviders.of(this).get(FormViewModel.class);
+        model = ViewModelProviders.of(getActivity()).get(FormViewModel.class);
 
         View aaaView = rootView.findViewById(R.id.button);
         aaaView.setOnClickListener(new View.OnClickListener() {
@@ -59,22 +59,25 @@ class FragmentForm3 extends FragmentFormBase {
                 cazzo3=tipo.equals(tipo1);
                 cazzo4=fumo.equals(fumo1);
 
-                if (cazzo1=true){
+                if (Boolean.TRUE.equals(cazzo1)){
                     statoeta++;
                     Log.e("cazzo222 "," "+statoeta);
                 }
-                if (sono==sono1){
+                if (Boolean.TRUE.equals(cazzo2)){
                     statosono++;
                 }
-                if (tipo==tipo1){
+                if (Boolean.TRUE.equals(cazzo3)){
                     statotipo++;
                 }
-                if (fumo==fumo1){
+                if (Boolean.TRUE.equals(cazzo4)){
                     statofumo++;
                 }
 
                 statotot= statoeta+statotipo+statosono+statofumo;
                 Log.e("cazzo "," "+statotot);
+
+                percert= (statotot*100)/4;
+                Log.e("aaa "," "+percert);
             }
         });
         return rootView;

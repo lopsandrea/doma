@@ -32,7 +32,7 @@ class FragmentForm1 extends FragmentFormBase {
                              Bundle savedInstanceState) {
         final ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_form1,container,false);
-        model = ViewModelProviders.of(this).get(FormViewModel.class);
+        model = ViewModelProviders.of(getActivity()).get(FormViewModel.class);
 
         radioGroupeta = (RadioGroup) rootView.findViewById(R.id.eta);
         radioGroupeta.clearCheck();
