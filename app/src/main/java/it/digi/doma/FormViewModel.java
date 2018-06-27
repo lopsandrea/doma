@@ -23,6 +23,9 @@ public final class FormViewModel extends ViewModel {
 
     private String fumo1 ;
 
+    private String sesso;
+    private String sesso1;
+
     public final int getPagerPosition() {
         return this.pagerPosition;
     }
@@ -93,5 +96,21 @@ public final class FormViewModel extends ViewModel {
 
     public void setFumo1(String fumo1) {
         this.fumo1 = fumo1;
+    }
+
+    public String getSesso() {
+        return sesso;
+    }
+
+    public String getSesso1() {
+        return sesso1;
+    }
+
+    public void setSesso1(String sesso1) {
+        this.sesso1 = sesso1;
+    }
+
+    public void setSesso(String sesso) {
+        this.sesso = sesso;
     }
 }

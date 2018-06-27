@@ -22,6 +22,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Parlaci un po' di te!"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginLeft="32dp"
             android:text="Età"
@@ -50,15 +57,41 @@
                 android:text="Più di 30 anni"
                 />
 
-            <RadioButton
-                android:id="@+id/anni_indiff"
+        </RadioGroup>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="32dp"
+            android:text="Sesso:"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:id="@+id/sesso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="32dp">
+
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Indifferente"
+                android:text="Maschio"
                 />
 
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Femmina"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Altro"
+                />
         </RadioGroup>
 
         <TextView

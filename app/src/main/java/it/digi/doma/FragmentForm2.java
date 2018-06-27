@@ -17,6 +17,8 @@ class FragmentForm2 extends FragmentFormBase {
     private RadioGroup radioGroupsono;
     private RadioGroup radioGrouptipo;
     private RadioGroup radioGroupfumo;
+    private RadioGroup radioGroupsesso;
+
 
 
 
@@ -94,6 +96,20 @@ class FragmentForm2 extends FragmentFormBase {
                 if (null != button4 && checkedId > -1){
                     model.setFumo1(button4.getText().toString());
                     Log.e("Cazzo", " "+ fumo1);
+                }
+            }
+        });
+
+        radioGroupsesso = (RadioGroup) rootView.findViewById(R.id.sesso1);
+        radioGroupsesso.clearCheck();
+
+        radioGroupsesso.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @SuppressLint("ResourceType")
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton button4 = (RadioButton) group.findViewById(checkedId);
+                if (null != button4 && checkedId > -1){
+                    model.setSesso1(button4.getText().toString());
                 }
             }
         });

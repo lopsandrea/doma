@@ -24,16 +24,21 @@ class FragmentForm3 extends FragmentFormBase {
     String sono1;
     String tipo1;
     String fumo1;
+    String sesso;
+    String sesso1;
+
 
     int statoeta=0;
     int statosono=0;
     int statotipo=0;
     int statofumo=0;
+    int statosesso=0;
     int statotot=0;
     Boolean cazzo1;
     Boolean cazzo2;
     Boolean cazzo3;
     Boolean cazzo4;
+    Boolean cazzo5;
     double percert;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,6 +61,9 @@ class FragmentForm3 extends FragmentFormBase {
                 sono1= model.getSono1();
                 tipo1= model.getTipo1();
                 fumo1= model.getFumo1();
+                sesso= model.getSesso();
+                sesso1= model.getSesso1();
+
                 Log.e("cairo2 "," "+eta);
 
                 cazzo1=eta.equals(eta1);
@@ -63,6 +71,7 @@ class FragmentForm3 extends FragmentFormBase {
                 cazzo2=sono.equals(sono1);
                 cazzo3=tipo.equals(tipo1);
                 cazzo4=fumo.equals(fumo1);
+                cazzo5 = sesso.equals(sesso1);
 
                 if (Boolean.TRUE.equals(cazzo1)){
                     statoeta=1;
@@ -77,11 +86,14 @@ class FragmentForm3 extends FragmentFormBase {
                 if (Boolean.TRUE.equals(cazzo4)){
                     statofumo=1;
                 }
+                if (Boolean.TRUE.equals(cazzo5)){
+                    statosesso=1;
+                }
 
-                statotot= statoeta+statotipo+statosono+statofumo;
+                statotot= statoeta+statotipo+statosono+statofumo+statosesso;
                 Log.e("cazzo "," "+statotot);
 
-                percert= (statotot*100)/4;
+                percert= (statotot*100)/5;
                 Log.e("aaa "," "+percert);
 
                 int percent = ((int) percert);
