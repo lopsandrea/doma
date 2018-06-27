@@ -13,7 +13,7 @@ import android.widget.RadioGroup;
 
 
 @SuppressLint("ValidFragment")
-class FragmentForm1 extends FragmentFormBase {
+public class FragmentForm1 extends FragmentFormBase {
     private RadioGroup radioGroupeta;
     private RadioGroup radioGroupsono;
     private RadioGroup radioGrouptipo;

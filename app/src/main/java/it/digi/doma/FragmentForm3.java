@@ -14,7 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 @SuppressLint("ValidFragment")
-class FragmentForm3 extends FragmentFormBase {
+public class FragmentForm3 extends FragmentFormBase {
     FormViewModel model;
     String eta;
     String sono;
